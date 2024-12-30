@@ -24,35 +24,22 @@
       <script>
         $(document).ready(function(){
 
-            $('.login_register_link').click(function(event){
-                event.preventDefault(); 
-                $('.login-register-section').toggle(); 
-            });
-
-            $(".login-link").click(function(e) {
-                e.preventDefault(); 
-                $("#register").hide(); 
-                $("#login").show();
-            });
-            
-            $(".register-link").click(function(e) {
-                e.preventDefault(); 
-                $("#login").hide(); 
-                $("#register").show();
-            });
-
-            $(".login_close").click(function(e) {
-               e.preventDefault(); 
-               $('.login-register-section').toggle();
-            });
-            $(".register_close").click(function(e) {
-               e.preventDefault(); 
-               $('.login-register-section').toggle();
-            });
             $(".get_in_touch").click(function(e) {
                e.preventDefault(); 
-               $('.appointment-section').toggle();
+               $('.getin-touch-section').toggle();
             });
+
+            $('.make-appointment').click(function(event){
+                event.preventDefault();
+                $('.getin-touch-section').toggle();
+                $('.appointment-section').toggle();
+            });
+
+            $(".getin_touch_close").click(function(e) {
+               e.preventDefault(); 
+               $('.getin-touch-section').toggle();
+            });
+            
             $(".appointment_close").click(function(e) {
                e.preventDefault(); 
                $('.appointment-section').toggle();
@@ -82,7 +69,6 @@
                      <a class="font-medium hover:bg-slate-100 hover:text-slate-900 inline-block px-3 py-1 rounded-lg text-md text-slate-700" href="#">Tools</a>
                      <a class="font-medium hover:bg-slate-100 hover:text-slate-900 inline-block px-3 py-1 rounded-lg text-md text-slate-700" href="#">Patient Stories</a>
                      <a class="font-medium hover:bg-slate-100 hover:text-slate-900 inline-block px-3 py-1 rounded-lg text-md text-slate-700" href="#">Why Choose Us?</a>
-                     <a class="login_register_link font-medium hover:bg-slate-100 hover:text-slate-900 inline-block px-3 py-1 rounded-lg text-md text-slate-700" href="">Login / Register</a>
                   </div>
                   <a class="get_in_touch bg-brand-300 focus:outline-none font-bold group hidden hover:bg-brand-400 hover:text-slate-100 inline-flex items-center justify-center md:block px-4 py-2 rounded-full text-sm text-white" href=""><span>Get in Touch<img class="inline mb-0.5 ml-1 size-4" src="ico-arrow-left.1f12c834.svg"></span></a>
                </div>
@@ -101,7 +87,6 @@
                <a class="block font-medium hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-lg text-md text-slate-700" href="#">Tools</a>
                <a class="block font-medium hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-lg text-md text-slate-700" href="#">Patient Stories</a>
                <a class="block font-medium hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-lg text-md text-slate-700" href="#">Why Choose Us?</a>
-               <a class="login_register_link block font-medium hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-lg text-md text-slate-700" href="">Login / Register</a>
                <a class="get_in_touch bg-brand-300 block font-bold hover:bg-brand-400 px-3 py-2 rounded-full text-md text-white" href="">Get in Touch <img class="inline mb-0.5 ml-1 size-4" src="ico-arrow-left.1f12c834.svg"></a>
             </div>
          </div>
@@ -572,9 +557,9 @@
          </div>
       </footer>
 
-      <div class="login-register-section">
-         <div class="login-register-main">
-            <div class="login-container z-depth-2">
+      <div class="getin-touch-section">
+         <div class="getin-touch-main">
+            <div class="getin-touch-container z-depth-2">
                <div id="login" class="col s12">
                   <div class="login_close">&times;</div>
                   <form class="col s12">
@@ -605,11 +590,11 @@
                      </div>
                   </form>
                </div>
-               <div id="register" class="col s12">
+               <div id="getin_touch" class="col s12">
                   <form class="col s12">
-                     <div class="register_close">&times;</div>
+                     <div class="getin_touch_close">&times;</div>
                      <div class="form-container">
-                        <h3 class="text-brand-500 text-4xl text-center">Register</h3>
+                        <h3 class="text-brand-500 text-4xl">Please fill your basic info</h3>
                         <div class="row">
                            <div class="input-field col s6">
                               <input id="last_name" type="text" class="validate">
@@ -630,24 +615,9 @@
                               <label for="phone" class="">Phone</label>
                            </div>
                         </div>
-                        <div class="row">
-                           <div class="input-field col s6">
-                              <input id="reg-password" type="password" class="validate">
-                              <label for="reg-password">Password</label>
-                           </div>
-                           <div class="input-field col s6">
-                              <input id="password-confirm" type="password" class="validate">
-                              <label for="password-confirm">Confirm Password</label>
-                           </div>
-                        </div>
                         <center>
-                           <button class="btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button>
+                           <button class="make-appointment btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button>
                         </center>
-                        <div class="row loginlink">
-                           <div class="col s12 text-center">
-                              <div class="text-dark">Already registered <span class="login-link">Login Here!</span></div>
-                           </div>
-                        </div>
                      </div>
                   </form>
                </div>
