@@ -1,4 +1,4 @@
-      .login-container, .appointment-container {
+      .getin-touch-container, .appointment-container {
           border: 1px solid rgb(255 255 255);
           backdrop-filter: blur(10px);
           border-radius: 15px;
@@ -8,7 +8,7 @@
       {
          padding: 40px;
       }
-      .login-register-main, .appointment-main {
+      .getin-touch-main, .appointment-main {
        display: flex;
        align-items: center;
        justify-content: center;
@@ -21,17 +21,17 @@
        background-color: rgba(0, 0, 0, 0.4);
        z-index: 100;
       }
-      .login-register-main form, .appointment-main form{
+      .getin-touch-main form, .appointment-main form{
          margin-bottom: 0px;
       }
       #login{
          width: 400px;
          height: auto;
+         display: none;
       }
-      #register{
+      #getin_touch{
          width: 550px;
          height: auto;
-         display: none;
       }
       .appointment-container{
         width:60%;
@@ -75,7 +75,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
    color: #f70776;
    cursor: pointer;
 }
-.login_close, .register_close, .appointment_close{
+.login_close, .getin_touch_close, .appointment_close{
     position: absolute;
     right: -40px;
     top: -25px;
@@ -91,10 +91,10 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     color: #000000b0;
     cursor: pointer;
 }
-.login_close:hover, .register_close:hover, .appointment_close:hover{
+.login_close:hover, .getin_touch_close:hover, .appointment_close:hover{
    color: red;
 }   
-  .login-register-section, .appointment-section {
+  .getin-touch-section, .appointment-section {
       display: none; 
   }
   
