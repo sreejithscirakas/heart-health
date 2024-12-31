@@ -1,81 +1,53 @@
-      .getin-touch-container, .appointment-container {
-          border: 1px solid rgb(255 255 255);
-          backdrop-filter: blur(10px);
-          border-radius: 15px;
-          background-color: #ffffffc4 !important;
-      }
-      .form-container
-      {
-         padding: 40px;
-      }
-      .getin-touch-main, .appointment-main {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       width: 100%;
-       height: 100%;
-       position: fixed;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-       background-color: rgba(0, 0, 0, 0.4);
-       z-index: 100;
-      }
-      .getin-touch-main form, .appointment-main form{
-         margin-bottom: 0px;
-      }
-      #login{
-         width: 400px;
-         height: auto;
-         display: none;
-      }
-      #getin_touch{
-         width: 550px;
-         height: auto;
-      }
-      .appointment-container{
-        width:60%;
-      }
-      .dropdown-content li > a, .dropdown-content li > span {
-         color: #f70776 !important;
-      }
-      .select-wrapper input.select-dropdown:focus {
-          border-bottom: 1px solid #f70776 !important;
-      }
-      .file-field .btn:hover{
-          background-color: unset;
-      }
-      input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #f70776 !important;
-    box-shadow: 0 1px 0 0 #f70776 !important;
+.getin-touch-section,
+.appointment-section,
+.login-section,
+.succes-section,
+.signup-section {
+    display: none;
+}
+.getin-touch-container,
+.appointment-container,
+.login-container,
+.succes-container,
+.signup-container {
+    border: 1px solid rgb(255 255 255);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    background-color: #ffffffc4 !important;
 }
 
-input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
-    color: #f70776 !important;
+.form-container {
+    padding: 40px;
 }
-input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
 
-    border-bottom: 1px solid #818181 !important;
+.getin-touch-main,
+.appointment-main,
+.login-main,
+.succes-main,
+.signup-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
 }
-.input-field label {
-    color: #818181 !important;
+
+.getin-touch-main form,
+.appointment-main form,
+.login-main form,
+.signup-main form {
+    margin-bottom: 0px;
 }
-.bg-white nav {
-    color: unset;
-    background-color: unset;
-    width: unset;
-    height: unset;
-    line-height: unset;
-    box-shadow: unset;
-}
-.loginlink{
-   margin-top:30px;
-}
-.register-link, .login-link{
-   color: #f70776;
-   cursor: pointer;
-}
-.login_close, .getin_touch_close, .appointment_close{
+
+.login_close,
+.getin_touch_close,
+.appointment_close {
     position: absolute;
     right: -40px;
     top: -25px;
@@ -91,18 +63,141 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     color: #000000b0;
     cursor: pointer;
 }
-.login_close:hover, .getin_touch_close:hover, .appointment_close:hover{
-   color: red;
-}   
-  .getin-touch-section, .appointment-section {
-      display: none; 
-  }
-  
-  .fileupload-txt{
-   display: flex;
-   align-items: center;
-  }
-  .form-container .text-brand-500{
+
+.login_close:hover,
+.getin_touch_close:hover,
+.appointment_close:hover {
+    color: red;
+}
+#login, #signup {
+    width: 400px;
+    height: auto;
+}
+
+#getin_touch {
+    width: 550px;
+    height: auto;
+}
+
+.appointment-container {
+    width: 60%;
+}
+.succes-container{
+    width: 50%;
+    padding: 60px;
+}
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #f70776 !important;
+}
+
+.select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid #f70776 !important;
+}
+
+.file-field .btn:hover {
+    background-color: unset;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #f70776 !important;
+    box-shadow: 0 1px 0 0 #f70776 !important;
+}
+
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:focus:not([readonly])+label,
+input[type=password]:focus:not([readonly])+label,
+input[type=email]:focus:not([readonly])+label,
+input[type=url]:focus:not([readonly])+label,
+input[type=time]:focus:not([readonly])+label,
+input[type=date]:focus:not([readonly])+label,
+input[type=datetime-local]:focus:not([readonly])+label,
+input[type=tel]:focus:not([readonly])+label,
+input[type=number]:focus:not([readonly])+label,
+input[type=search]:focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #f70776 !important;
+}
+.btn:focus, 
+.btn-large:focus, 
+.btn-small:focus, 
+.btn-floating:focus {
+    background-color: #f70776;
+}
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+
+    border-bottom: 1px solid #818181 !important;
+}
+
+.input-field label {
+    color: #818181 !important;
+}
+
+.bg-white nav {
+    color: unset;
+    background-color: unset;
+    width: unset;
+    height: unset;
+    line-height: unset;
+    box-shadow: unset;
+}
+.fileupload-txt {
+    display: flex;
+    align-items: center;
+}
+
+.form-container .text-brand-500 {
     margin-top: 2rem;
     margin-bottom: 2rem;
-  }
+}
+.succes-icon{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.succes-icon svg{
+    width:100px;
+    height:100px;
+    fill:#008000;
+}
+.succes-container h3{
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px;
+    padding: 10px 0px;
+   
+}
+
+.succes-container h3 span{
+     color:#f70776;
+     font-size: 28px;
+}
+.login-link{
+    margin-top: 25px;
+}
+.submit-bascisinfo{
+    margin-left:20px;
+}
