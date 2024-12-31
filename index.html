@@ -29,11 +29,31 @@
                $('.getin-touch-section').toggle();
             });
 
+            $(".submit-bascisinfo").click(function(e) {
+               e.preventDefault(); 
+               $('.getin-touch-section').toggle();
+            });
+
             $('.make-appointment').click(function(event){
                 event.preventDefault();
                 $('.getin-touch-section').toggle();
                 $('.appointment-section').toggle();
             });
+
+            $(".submit-appointment").click(function(e) {
+               e.preventDefault(); 
+               $('.appointment-section').toggle();
+               $('.succes-section').toggle();
+            });
+
+            $(".signup-link").click(function(e) {
+               e.preventDefault(); 
+               $('.succes-section').toggle();
+               $('.signup-section').toggle();
+            });
+
+            
+
 
             $(".getin_touch_close").click(function(e) {
                e.preventDefault(); 
@@ -44,6 +64,11 @@
                e.preventDefault(); 
                $('.appointment-section').toggle();
             });
+            $(".login_close").click(function(e) {
+               e.preventDefault(); 
+               $('.login-section').toggle();
+            });
+            
 
             $('select').formSelect();
             $('.datepicker').datepicker();
@@ -560,45 +585,15 @@
       <div class="getin-touch-section">
          <div class="getin-touch-main">
             <div class="getin-touch-container z-depth-2">
-               <div id="login" class="col s12">
-                  <div class="login_close">&times;</div>
-                  <form class="col s12">
-                     <div class="form-container">
-                        <h3 class="text-brand-500 text-4xl text-center">Login</h3>
-                        <div class="row">
-                           <div class="input-field col s12">
-                              <input id="username" type="text" class="validate">
-                              <label for="username">Username</label>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="input-field col s12">
-                              <input id="password" type="password" class="validate">
-                              <label for="password">Password</label>
-                           </div>
-                        </div>
-                        
-                        <center>
-                           <button class="btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button>
-                           <!-- <br><br><a href="">Forgotten password?</a> -->
-                        </center>
-                        <div class="row loginlink">
-                           <div class="col s12 text-center">
-                              <div>Don't Have an Account? <span class="register-link">Register Here!</span></div>
-                           </div>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               <div id="getin_touch" class="col s12">
+               <div  id="getin_touch" class="col s12">
                   <form class="col s12">
                      <div class="getin_touch_close">&times;</div>
                      <div class="form-container">
                         <h3 class="text-brand-500 text-4xl">Please fill your basic info</h3>
                         <div class="row">
                            <div class="input-field col s6">
-                              <input id="last_name" type="text" class="validate">
-                              <label for="last_name" class="">First Name</label>
+                              <input id="first_name" type="text" class="validate">
+                              <label for="first_name" class="">First Name</label>
                            </div>
                            <div class="input-field col s6">
                               <input id="last_name" type="text" class="validate">
@@ -615,9 +610,14 @@
                               <label for="phone" class="">Phone</label>
                            </div>
                         </div>
-                        <center>
-                           <button class="make-appointment btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button>
-                        </center>
+                        <div class="row">
+                           <div class="col s12">
+                              <!-- <button class="submit-bascisinfo btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button> -->
+                              <center>
+                                 <button class="make-appointment btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Make an Appointment <img class="inline mb-0.5 ml-1 size-4" src="ico-arrow-left.1f12c834.svg"></button>
+                              </center>
+                           </div>
+                        </div>
                      </div>
                   </form>
                </div>
@@ -672,6 +672,54 @@
                             </div>
                         </div>
                         <center>
+                           <button class="submit-appointment btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button>
+                        </center>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="succes-section">
+         <div class="succes-main">
+            <div class="succes-container z-depth-2">
+               <div class="succes-icon">
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16.78 9.7L11.11 15.37C10.97 15.51 10.78 15.59 10.58 15.59C10.38 15.59 10.19 15.51 10.05 15.37L7.22 12.54C6.93 12.25 6.93 11.77 7.22 11.48C7.51 11.19 7.99 11.19 8.28 11.48L10.58 13.78L15.72 8.64C16.01 8.35 16.49 8.35 16.78 8.64C17.07 8.93 17.07 9.4 16.78 9.7Z"/>
+                  </svg>
+               </div>
+               <h3><span>Your appointment has been submitted successfully.</span></h3>
+               <h3> Our care coordinator will review your request and get back to you soon.</h3>
+               <center>
+                  <button class="signup-link btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Signup</button>
+               </center>
+            </div>
+         </div>
+      </div>
+
+      <div class="signup-section">
+         <div class="signup-main">
+            <div class="signup-container z-depth-2">
+               <div id="signup" class="col s12">
+                  <form class="col s12">
+                     <div class="form-container">
+                        <h3 class="text-brand-500 text-4xl text-center">Signup</h3>
+                        <div class="row">
+                           <div class="input-field col s12">
+                              <input id="signup_password" type="password" class="validate">
+                              <label for="signup_password">Password</label>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="input-field col s12">
+                              <input id="signup_confirmpassword" type="password" class="validate">
+                              <label for="signup_confirmpassword">Confirm Password</label>
+                           </div>
+                        </div>
+                        
+                        <center>
                            <button class="btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button>
                         </center>
                      </div>
@@ -681,6 +729,37 @@
          </div>
       </div>
 
+      <div class="login-section">
+         <div class="login-main">
+            <div class="login-container z-depth-2">
+               <div id="login" class="col s12">
+                  <div class="login_close">&times;</div>
+                  <form class="col s12">
+                     <div class="form-container">
+                        <h3 class="text-brand-500 text-4xl text-center">Login</h3>
+                        <div class="row">
+                           <div class="input-field col s12">
+                              <input id="username" type="text" class="validate">
+                              <label for="username">Username</label>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="input-field col s12">
+                              <input id="password" type="password" class="validate">
+                              <label for="password">Password</label>
+                           </div>
+                        </div>
+                        
+                        <center>
+                           <button class="btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button>
+                           <br><br><a href="">Forgotten password?</a>
+                        </center>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
    
 </body>
 
