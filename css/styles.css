@@ -201,3 +201,11 @@ textarea.materialize-textarea {
 .submit-bascisinfo{
     margin-left:20px;
 }
+.username-info{
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+}
+.username-info i{
+    padding-right: 5px;
+}
