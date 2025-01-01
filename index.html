@@ -52,6 +52,17 @@
                $('.signup-section').toggle();
             });
 
+            $(".signup-submit").click(function(e) {
+               e.preventDefault(); 
+               $('.signup-section').toggle();
+               $('.user-view-section').toggle();
+            });
+            $(".user-make-appointment").click(function(e) {
+               e.preventDefault(); 
+               $('.user-view-section').toggle();
+               $('.appointment-section').toggle();
+            });
+
             
 
 
@@ -68,6 +79,11 @@
                e.preventDefault(); 
                $('.login-section').toggle();
             });
+            $(".user-view_close").click(function(e) {
+               e.preventDefault(); 
+               $('.user-view-section').toggle();
+            });
+            
             
 
             $('select').formSelect();
@@ -76,6 +92,19 @@
         });
 
       </script>
+
+   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
 
    </head>
    <body class="bg-white text-slate-700">
@@ -721,7 +750,7 @@
                         </div>
                         
                         <center>
-                           <button class="btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button>
+                           <button class="signup-submit btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button>
                         </center>
                      </div>
                   </form>
@@ -757,6 +786,45 @@
                         </center>
                      </div>
                   </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="user-view-section">
+         <div class="user-view-main">
+            <div class="user-view-container z-depth-2">
+               <div class="user-view_close">&times;</div>
+               <div  id="user_view" class="col s12">
+                  <!-- <div id='calendar'></div> -->
+                  <div class="row">
+                     <div class="col s8">
+                        <div class="upcoming-appointment">
+                           <h3>Your next appointment is on <span>5th January 2025 at 10.00 AM.</span></h3>
+                           <p>Dr.Thomas Addison, Cardiologist</p>
+                           <div class="join-appointment-btn">
+                              <button class="btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit">Join Here!</button>
+                           </div>
+                        </div>
+                        <div class="new-appointment">
+                           <h3>Make new appointment</h3>
+                           <a class="user-make-appointment btn-floating btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100"><i class="material-icons">add</i></a>
+                        </div>
+                     </div>
+                     <div class="col s4">
+                        <h3>Upcoming appointments</h3>
+                        <div class="upcoming-appointment-list">
+                           <h3>Followup</h3>
+                           <p>12th January 2025 at 10.00 AM.</p>
+                           <p>Dr.Thomas Addison, Cardiologist</p>
+                        </div>
+                        <div class="upcoming-appointment-list">
+                           <h3>Followup</h3>
+                           <p>20th January 2025 at 10.00 AM.</p>
+                           <p>Dr.Thomas Addison, Cardiologist</p>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
