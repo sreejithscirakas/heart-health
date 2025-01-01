@@ -2,14 +2,16 @@
 .appointment-section,
 .login-section,
 .succes-section,
-.signup-section {
+.signup-section,
+.user-view-section {
     display: none;
 }
 .getin-touch-container,
 .appointment-container,
 .login-container,
 .succes-container,
-.signup-container {
+.signup-container,
+.user-view-container {
     border: 1px solid rgb(255 255 255);
     backdrop-filter: blur(10px);
     border-radius: 15px;
@@ -24,7 +26,8 @@
 .appointment-main,
 .login-main,
 .succes-main,
-.signup-main {
+.signup-main,
+.user-view-main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +50,8 @@
 
 .login_close,
 .getin_touch_close,
-.appointment_close {
+.appointment_close,
+.user-view_close {
     position: absolute;
     right: -40px;
     top: -25px;
@@ -66,7 +70,8 @@
 
 .login_close:hover,
 .getin_touch_close:hover,
-.appointment_close:hover {
+.appointment_close:hover,
+.user-view_close:hover {
     color: red;
 }
 #login, #signup {
@@ -84,6 +89,10 @@
 }
 .succes-container{
     width: 50%;
+    padding: 60px;
+}
+.user-view-container{
+    width: 70%;
     padding: 60px;
 }
 .dropdown-content li>a,
@@ -208,4 +217,41 @@ textarea.materialize-textarea {
 }
 .username-info i{
     padding-right: 5px;
+}
+.new-appointment{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top:20px;
+  justify-content: end;
+}
+.new-appointment h3 {
+  padding-right: 10px;
+}
+.upcoming-appointment{
+  border: solid 1px #ff85a3;
+  border-radius: 5px;
+  padding: 40px 20px;
+}
+.upcoming-appointment h3{
+  font-size: 20px;
+  padding-bottom:10px
+}
+.upcoming-appointment h3 span{
+  color:#f70776;
+}
+.join-appointment-btn{
+  margin-top:20px;
+  display: flex;
+  justify-content: center;
+}
+.upcoming-appointment-list{
+  border: solid 1px #c3c3c3;
+  border-radius: 5px;
+  padding: 20px 20px;
+  margin-top: 20px;
+}
+.upcoming-appointment-list h3{
+  font-size: 20px;
+  padding-bottom:10px
 }
