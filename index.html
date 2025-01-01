@@ -20,7 +20,7 @@
       <script src="js/materialize.js"></script>
       <script src="js/init.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-      <script src="index.a12d9bec.js" defer></script>
+      <script src="js/a12d9bec.js" defer></script>
       <script>
         $(document).ready(function(){
 
@@ -93,7 +93,7 @@
 
       </script>
 
-   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+   <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -104,7 +104,7 @@
         calendar.render();
       });
 
-    </script>
+    </script> -->
 
    </head>
    <body class="bg-white text-slate-700">
@@ -621,27 +621,26 @@
                         <h3 class="text-brand-500 text-4xl">Please fill your basic info</h3>
                         <div class="row">
                            <div class="input-field col s6">
-                              <input id="first_name" type="text" class="validate">
+                              <input id="first_name" type="text" class="validate" autocomplete="off">
                               <label for="first_name" class="">First Name</label>
                            </div>
                            <div class="input-field col s6">
-                              <input id="last_name" type="text" class="validate">
+                              <input id="last_name" type="text" class="validate" autocomplete="off">
                               <label for="last_name" class="">Last Name</label>
                            </div>
                         </div>
                         <div class="row">
                            <div class="input-field col s6">
-                              <input id="email" type="email" class="validate">
+                              <input id="email" type="email" class="validate" autocomplete="off">
                               <label for="email" class="">Email</label>
                            </div>
                            <div class="input-field col s6">
-                              <input id="phone" type="number" class="validate">
+                              <input id="phone" type="number" class="validate" autocomplete="off">
                               <label for="phone" class="">Phone</label>
                            </div>
                         </div>
                         <div class="row">
                            <div class="col s12">
-                              <!-- <button class="submit-bascisinfo btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Submit</button> -->
                               <center>
                                  <button class="make-appointment btn btn-large waves-effect waves-light bg-brand-300 hover:bg-brand-400 hover:text-slate-100 rounded-full" type="submit" name="action">Make an Appointment <img class="inline mb-0.5 ml-1 size-4" src="ico-arrow-left.1f12c834.svg"></button>
                               </center>
@@ -664,13 +663,13 @@
                         <h3 class="text-brand-500 text-4xl text-center">Make an Appointment</h3>
                         <div class="row">
                            <div class="input-field col s12">
-                               <select>
+                               <select id="preferreddoctor">
                                  <option value="">Select</option>
                                  <option value="1">Dr. Emily Johnson</option>
                                  <option value="2">Dr. Jessica Taylor</option>
                                  <option value="3">Dr. Linda Anderson</option>
                                </select>
-                               <label>Preferred Doctor</label>
+                               <label for="preferreddoctor">Preferred Doctor</label>
                              </div>
                         </div>
                         <div class="row">
@@ -693,10 +692,10 @@
                            <div class="file-field input-field">
                               <div class="btn btn-flat">
                                 <span class="fileupload-txt"> <i class="material-icons">file_upload</i> Upload File</span>
-                                <input type="file">
+                                <input id="file_upload" type="file">
                               </div>
                               <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
+                                <input id="file_path" class="file-path validate" type="text">
                               </div>
                             </div>
                         </div>
@@ -769,7 +768,7 @@
                         <h3 class="text-brand-500 text-4xl text-center">Login</h3>
                         <div class="row">
                            <div class="input-field col s12">
-                              <input id="username" type="text" class="validate">
+                              <input id="username" type="text" class="validate" autocomplete="off">
                               <label for="username">Username</label>
                            </div>
                         </div>
