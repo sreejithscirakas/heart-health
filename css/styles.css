@@ -252,6 +252,16 @@ textarea.materialize-textarea {
   margin-top: 20px;
 }
 .upcoming-appointment-list h3{
-  font-size: 20px;
+  font-size: 14px;
   padding-bottom:10px
+}
+.appointment-date{
+  font-size: 12px;
+  font-weight:300;
+}
+.appointment-clinician{
+  font-size: 12px;
+}
+.mb-0{
+  margin-bottom: 0px;
 }
