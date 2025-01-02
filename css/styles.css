@@ -3,7 +3,11 @@
 .login-section,
 .succes-section,
 .signup-section,
-.user-view-section {
+.user-view-section,
+.cc-view-section,
+.cc-view-appointment-section,
+.addpatient-section,
+.addclinician-section {
     display: none;
 }
 .getin-touch-container,
@@ -11,7 +15,11 @@
 .login-container,
 .succes-container,
 .signup-container,
-.user-view-container {
+.user-view-container,
+.cc-view-container,
+.cc-view-appointment-container,
+.addpatient-container,
+.addclinician-container {
     border: 1px solid rgb(255 255 255);
     backdrop-filter: blur(10px);
     border-radius: 15px;
@@ -27,7 +35,11 @@
 .login-main,
 .succes-main,
 .signup-main,
-.user-view-main {
+.user-view-main,
+.cc-view-main,
+.cc-view-appointment-main,
+.addpatient-main,
+.addclinician-main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,14 +56,20 @@
 .getin-touch-main form,
 .appointment-main form,
 .login-main form,
-.signup-main form {
+.signup-main form,
+.addpatient-main form,
+.addclinician-main form {
     margin-bottom: 0px;
 }
 
 .login_close,
 .getin_touch_close,
 .appointment_close,
-.user-view_close {
+.user-view_close,
+.cc-view_close,
+.cc-view_appointment-close,
+.addpatient-close,
+.addclinician-close {
     position: absolute;
     right: -40px;
     top: -25px;
@@ -71,7 +89,11 @@
 .login_close:hover,
 .getin_touch_close:hover,
 .appointment_close:hover,
-.user-view_close:hover {
+.user-view_close:hover,
+.cc-view_close:hover,
+.cc-view_appointment-close:hover,
+.addpatient-close:hover,
+.addclinician-close:hover {
     color: red;
 }
 #login, #signup {
@@ -86,6 +108,10 @@
 
 .appointment-container {
     width: 60%;
+}
+.cc-view-container, .cc-view-appointment-container {
+    width: 60%;
+    padding:60px;
 }
 .succes-container{
     width: 50%;
@@ -197,7 +223,6 @@ textarea.materialize-textarea {
     line-height: 25px;
     font-size: 18px;
     padding: 10px 0px;
-   
 }
 
 .succes-container h3 span{
@@ -264,4 +289,77 @@ textarea.materialize-textarea {
 }
 .mb-0{
   margin-bottom: 0px;
+}
+.tabs{
+    background-color: unset;
+    margin-bottom: 20px;
+}
+.view-btn, 
+.view-btn:hover, 
+.view-btn:focus{
+    background-color: #ff4573;
+}
+.cc-add-patient-bd, 
+.cc-add-clinician-bd{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.cc-add-patient, .cc-add-clinician{
+    border:solid 1px #0000001f;
+    padding:20px;
+    margin-bottom:30px;
+    border-radius:10px;
+    width: 100%;
+}
+.cc-add-patient p, .cc-add-clinician p{
+    margin-top:15px;
+}
+.cc-add-patient .btn-floating, 
+.cc-add-clinician .btn-floating,
+.cc-add-patient .btn-floating:hover, 
+.cc-add-clinician .btn-floating:hover,
+.cc-add-patient .btn-floating:focus, 
+.cc-add-clinician .btn-floating:focus{
+    background-color: #ff4573;
+}
+.appointment-patient-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.appointment-detail{
+    padding:20px 0px;
+}
+.appointment-patient-detail{
+    border-bottom:solid 1px #d0d0d0;
+    padding-bottom: 20px;
+}
+.appointment-userdetails  h3{
+    font-size: 25px;
+    padding-bottom:5px;
+}
+.appointment-userdetails h4{
+    padding:5px 0px;
+}
+.appointment-to-detail{
+    display: flex;
+    margin-top:30px;
+}
+.appointment-to-detail div{
+    width: 50%;
+}
+.appointmentdetail-darkheading{
+    color:#ff4573;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+.appointment-to-detail h4{
+    margin-bottom: 20px;
+}
+.appointment-detail-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
 }
