@@ -363,3 +363,12 @@ textarea.materialize-textarea {
     margin-top: 20px;
     gap: 15px;
 }
+.file-name{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.uploaded-date{
+  font-size: 12px;
+  padding: 10px 5px;
+}
