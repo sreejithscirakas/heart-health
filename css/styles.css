@@ -7,8 +7,12 @@
 .cc-view-section,
 .cc-view-appointment-section,
 .addpatient-section,
-.addclinician-section {
+.addclinician-section,
+.cl-view-appointment-section {
     display: none;
+}
+.cl-view-section{
+    visibility: hidden;
 }
 .getin-touch-container,
 .appointment-container,
@@ -19,7 +23,10 @@
 .cc-view-container,
 .cc-view-appointment-container,
 .addpatient-container,
-.addclinician-container {
+.addclinician-container,
+.twofa-container,
+.cl-view-container,
+.cl-view-appointment-container {
     border: 1px solid rgb(255 255 255);
     backdrop-filter: blur(10px);
     border-radius: 15px;
@@ -39,7 +46,11 @@
 .cc-view-main,
 .cc-view-appointment-main,
 .addpatient-main,
-.addclinician-main {
+.addclinician-main,
+.twofa-main,
+.cl-view-main,
+.cl-view-main,
+.cl-view-appointment-main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +80,10 @@
 .cc-view_close,
 .cc-view_appointment-close,
 .addpatient-close,
-.addclinician-close {
+.addclinician-close,
+.twofa_close,
+.cl-view_close,
+.cl-view_appointment-close {
     position: absolute;
     right: -40px;
     top: -25px;
@@ -93,7 +107,10 @@
 .cc-view_close:hover,
 .cc-view_appointment-close:hover,
 .addpatient-close:hover,
-.addclinician-close:hover {
+.addclinician-close:hover,
+.twofa_close:hover,
+.cl-view_close:hover,
+.cl-view_appointment-close {
     color: red;
 }
 #login, #signup {
@@ -109,8 +126,16 @@
 .appointment-container {
     width: 60%;
 }
-.cc-view-container, .cc-view-appointment-container {
+.cc-view-container, .cc-view-appointment-container, .cl-view-appointment-container {
     width: 60%;
+    padding:60px;
+}
+
+#calendar{
+    padding:0px 15px;
+}
+.cl-view-container {
+    width: 80%;
     padding:60px;
 }
 .succes-container{
@@ -295,8 +320,11 @@ textarea.materialize-textarea {
     margin-bottom: 20px;
 }
 .view-btn, 
+.cl-view-btn, 
 .view-btn:hover, 
-.view-btn:focus{
+.cl-view-btn:hover, 
+.view-btn:focus, 
+.cl-view-btn:focus{
     background-color: #ff4573;
 }
 .cc-add-patient-bd, 
