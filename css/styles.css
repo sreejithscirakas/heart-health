@@ -400,3 +400,16 @@ textarea.materialize-textarea {
   font-size: 12px;
   padding: 10px 5px;
 }
+footer nav ul li {
+  float:unset;
+}
+footer nav ul a {
+  color: unset;
+  padding:0px;
+}
+footer nav ul a:hover{
+  background-color:unset;
+}
+footer nav a {
+    color:unset;
+}
