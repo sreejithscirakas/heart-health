@@ -27,6 +27,7 @@
             $(".get_in_touch").click(function(e) {
                e.preventDefault(); 
                $('.login-section').toggle();
+               document.body.style.overflow = 'hidden';
             });
             $(".login-submit").click(function(e) {
                e.preventDefault();
@@ -48,10 +49,15 @@
                $('.cc-view-section').toggle();
                $('.addclinician-section').toggle();
             });
-            
+            $(".login_close").click(function(e) {
+               e.preventDefault(); 
+               $('.login-section').toggle();
+               document.body.style.overflow = 'auto';
+            });
             $(".cc-view_close").click(function(e) {
                e.preventDefault(); 
                $('.cc-view-section').toggle();
+               document.body.style.overflow = 'auto';
             });
             $(".cc-view_appointment-close").click(function(e) {
                e.preventDefault(); 
