@@ -117,18 +117,17 @@
     width: 400px;
     height: auto;
 }
-
-#getin_touch {
-    width: 550px;
-    height: auto;
-}
-
 .appointment-container {
     width: 60%;
 }
 .cc-view-container, .cc-view-appointment-container, .cl-view-appointment-container {
     width: 60%;
     padding:60px;
+}
+
+.getin-touch-container {
+    width: 60%;
+    padding:0px;
 }
 
 #calendar{
